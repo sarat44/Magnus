@@ -9,8 +9,9 @@
             try{
                 if(user.equals("guest") && pass.equals("magnus"))
                 {
-                     RequestDispatcher rd=request.getRequestDispatcher("guestRD.jsp");
-                     rd.include(request,response);
+                    response.sendRedirect("guestRD.jsp");
+                     //RequestDispatcher rd=request.getRequestDispatcher("guestRD.jsp");
+                     //rd.include(request,response);
                 }else{
                     RequestDispatcher rd=request.getRequestDispatcher("guestRDE.jsp");
                     rd.include(request,response);
@@ -23,3 +24,8 @@
       
     </body>
 </html>
+
+
+
+
+

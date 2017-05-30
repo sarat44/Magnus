@@ -21,9 +21,9 @@
 	</nav>
 		<form action="usermain.jsp">
 			<table>
-			<tr><td><h3>User Login Page</h3></td></tr>
-				<tr><td><input type="text" placeholder="Username" name="User" ><br><br>
-				<tr><td><input type="password" name="Password" placeholder="Pass"></td></tr>
+                                <tr><td><h3>User Login Page</h3></td></tr>
+				<tr><td><input type="text" placeholder="Username" name="User" required><br><br>
+                                <tr><td><input type="password" name="Password" placeholder="Pass" required></td></tr>
 				<tr><td><input type="submit" value="Login"></td></tr>
 			</table>
 			<label>  <a href="ForgotPassword.aspx">Forgot Password?</a></label>

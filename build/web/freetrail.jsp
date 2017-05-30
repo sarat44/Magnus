@@ -2,6 +2,17 @@
 <head>
 <title>MagnusDemo</title>
 <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
+<script>
+function validateForm() {
+    var x = document.forms["myForm"]["email"].value;
+    var atpos = x.indexOf("@");
+    var dotpos = x.lastIndexOf(".");
+    if (atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length) {
+        alert("Not a valid e-mail address");
+        return false;
+    }
+}
+</script>
 </head>
 <body>
 <div id="main">
@@ -15,13 +26,14 @@
 </div>
 <div class="bod">
     <center>
+        <form action="trail.jsp">
             <table border-spacing="5px">
-                <tr><td>Name: </td><td><input type="text" name="name"></td></tr><br><br>
-                <tr><td>Password: </td><td><input type="password" name="pass"></td></tr>
-                <tr><td>Email: </td><td><input type="text" name="email"></td></tr>
-                <tr><td>Country: </td><td><input type="text" name="country"></td></tr>
+                <tr><td>Name: </td><td><input type="text" name="name" placeholder="Name" required="Plz enter your Name"></td></tr><br><br>
+                <tr><td>Password: </td><td><input type="password" name="pass" placeholder="Password" required="Plz enter your Password"></td></tr>
+                <tr><td>Email: </td><td><input type="text" name="email" placeholder="Email" required="Plz enter your EmailId" onsubmit="return validateForm();"></td></tr>
+                <tr><td>Country: </td><td><input type="text" name="country" placeholder="Country" required="Plz enter the Country"></td></tr>
                 <tr><td><input type="submit" value="submit"><td><input type="reset" value="reset"></td></td></tr>
-            </table>
+            </table></form>
     </center>
 </div>
     <div id="img1"><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br></div>

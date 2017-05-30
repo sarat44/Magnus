@@ -17,6 +17,7 @@
                   try{
                       if(user.equals("admin")&& pass.equals("admin"))
                       {
+                              
                               RequestDispatcher rd=request.getRequestDispatcher("adminRD.jsp"); 
                               rd.include(request, response);
                       }else{

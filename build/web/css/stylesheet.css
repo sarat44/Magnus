@@ -11,7 +11,17 @@ a{
 	 margin-top:-100px;
 	 border-radius:10px;
 	 font-size:150%;
-     float:right;
+         float:right;
+}
+#header1{
+         background-color: black;
+	 font-family:cursive;
+	 height:80px;
+	 width:100%;
+	 margin-top:-8opx;
+	 border-radius:10px;
+	 font-size:150%;
+         float:right;
 }
 nav {
   margin-top:0px;
