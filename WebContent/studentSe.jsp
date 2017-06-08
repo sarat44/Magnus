@@ -8,19 +8,19 @@
 <body>
 	<div class="main1">
     	<div id="header1">
-       		<img src="images/logo.png" height="70px">
+       		<a href="index.jsp"> <img src="images/logo.png" height="70px"></a>
 			<nav id="nav-3">
             <a class="link-3" href="student.jsp">Students</a>
             <a class="link-3" href="studentSe.jsp">Students Search</a>
-            <a class="link-3" href="users.jsp">Users</a>
-            <a class="link-3" href="users search.jsp">Users Search</a>
-            <a class="link-3" href="more.jsp">More</a>
+            <a class="link-3" href="user.jsp">Users</a>
+            <a class="link-3" href="userSe.jsp">Users Search</a>
+            <a class="link-3" href="moreDetails.jsp">More</a>
             <a class="link-3" href="logout.jsp">LogOut</a>
     		</nav>
     	</div>
     	<div id="search">
     		<center>
-    			<br><br><br><br><br><h2>Search</h2>
+    			<br><br><br><br><br><h2>Search Student</h2>
     			<form action="studentSea.jsp">
     			<table>
     					<tr><td>Name</td><td><input type="text" name="name" placeholder="Name" required="Plz enter the Name"></td>
@@ -41,7 +41,7 @@
     			</center>
     	</div>
     	
-		<div class="footer1">
+		<div class="footer">
 		<center>
 			<div>Magnus Pvt. Ltd., &copy; 2017, ALL RIGHTS RESERVED</div>
 			<div> <a href="" >Subscribe To News Letter</a> </div>
@@ -51,11 +51,6 @@
     </div>
     		
     	
-		<%
-		
-		
-		
-		%>
 </body>
 </html>
 

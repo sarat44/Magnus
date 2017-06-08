@@ -17,7 +17,7 @@ function validateForm() {
 <body>
 <div id="main">
 <div id="header">
-	<img src="images/logo.png" height="70px">
+	<a href="index.jsp"> <img src="images/logo.png" height="70px"></a>
 	<nav id="nav-3">
 	<a class="link-3" href="index.jsp">Free Trail</a>
 	<a class="link-3" href="index.jsp">Sign In</a>

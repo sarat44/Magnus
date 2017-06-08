@@ -1,4 +1,5 @@
 <%@page import="java.sql.*"%>
+<%@ page import="com.Magnus.*" %>
 <html>
     <head>
       <title>Magnus Application</title>
@@ -8,35 +9,23 @@
                    Connection con;
         %>
        <%
-                   String user=request.getParameter("name");
-                   String pass=request.getParameter("pass");
-                   String email=request.getParameter("email");
-                   String country=request.getParameter("country");
+                   String Name=request.getParameter("name");
+                   String Pass=request.getParameter("pass");
+                   String Email=request.getParameter("email");
+                   String Country=request.getParameter("country");
                   	
-                  	session.setAttribute("user",user);
-                  	session.setAttribute("pass",pass);
-                  	session.setAttribute("email",email);
-                  	session.setAttribute("country",country);
-                   //DriverManager.registerDriver(new com.microsoft.sqlserver.jdbc.SQLServerDriver());
-                   Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-
-                   System.out.println("hello driver...");
-                   String url="jdbc:sqlserver://localhost:1433; databaseName=sarat; user= sa; password=sarat44@";
-                   con = DriverManager.getConnection(url);
-                   
-                   Statement st=con.createStatement();
-                   
-                  // st.executeUpdate("insert into login values('saratkamal8','saratkamal44')");
-                   //String Query="insert into Trial values('"+user+"','"+pass+"','"+email+"','"+country+"')";
-                   //insert into students values
-                   System.out.println("insert into Trail values('"+user+"','"+pass+"','"+email+"','"+country+"')");
-                   int a=st.executeUpdate("insert into Trail values('"+user+"','"+pass+"','"+email+"','"+country+"')");
-                   System.out.println("row is inserted"+a);
-                   if(a<=1)
-                   {
-                        RequestDispatcher rd=request.getRequestDispatcher("trailSR.jsp");
-                        rd.forward(request,response);
-                   }
+                  	session.setAttribute("user",Name);
+                  	session.setAttribute("pass",Pass);
+                  	session.setAttribute("email",Email);
+                  	session.setAttribute("country",Country);
+                    Bean b1=new Bean(Name,Pass,Email,Country);
+                  	DAO O=new DAO();
+                  	O.insert1(b1);
+                   	if(O.a<=1)
+                   	{
+                    	    RequestDispatcher rd=request.getRequestDispatcher("trailSR.jsp");
+                    	    rd.forward(request,response);
+                   	}
                    %>
     </body>
 </html>

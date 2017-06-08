@@ -6,15 +6,22 @@
 <body>
 	<div class="main">
     	<div id="header1">
-       		<img src="images/logo.png" height="70px">
+       		<a href="index.jsp"> <img src="images/logo.png" height="70px"></a>
 			<nav id="nav-3">
             <a class="link-3" href="student.jsp">Students</a>
             <a class="link-3" href="studentSe.jsp">Students Search</a>
-            <a class="link-3" href="users.jsp">Users</a>
-            <a class="link-3" href="users search.jsp">Users Search</a>
-            <a class="link-3" href="more.jsp">More</a>
+            <a class="link-3" href="user.jsp">Users</a>
+            <a class="link-3" href="userSe.jsp">Users Search</a>
+            <a class="link-3" href="moreDetails.jsp">More</a>
             <a class="link-3" href="logout.jsp">LogOut</a>
     		</nav>
+    	</div>
+    	<div id="multiplet">
+    			<h2>Multiple Tabs</h2>
+    			<table>
+    				<tr>
+    			</table>
+    		
     	</div>
     	<br><br><br>
     	<div id="sidebar">
@@ -32,6 +39,12 @@
   				 
 			</ul> 
     	</div>
+    	
+    	<div class=footer>
+<center><div>Magnus Pvt. Ltd., &copy; 2017, ALL RIGHTS RESERVED</div>
+<div> <a href="" >Subscribe To News Letter</a></div>
+<div class="feed"><a href="" >FeedBack</a></div></center>
+</div>
     	</div>
 </body>
 </html>

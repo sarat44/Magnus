@@ -6,13 +6,13 @@
 <body>
 	<div id="main">
 	<div id="header1">
-   	     <img src="images/logo.png" height="70px">
+   	    <a href="index.jsp"> <img src="images/logo.png" height="70px"></a>
 		<nav id="nav-3">
 		 <a class="link-3" href="students.jsp">Students</a>
             <a class="link-3" href="studentSe.jsp">Students Search</a>
             <a class="link-3" href="users.jsp">Users</a>
             <a class="link-3" href="users search.jsp">Users Search</a>
-            <a class="link-3" href="more.jsp">More</a>
+            <a class="link-3" href="moreDetails.jsp">More</a>
             <a class="link-3" href="logout.jsp">LogOut</a>
 		</nav>
 	</div>

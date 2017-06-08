@@ -1,6 +1,8 @@
+
 <html>
 <head>
 <title>MagnusDemo</title>
+<script src='https://www.google.com/recaptcha/api.js'></script>
 <link type="text/css" rel="stylesheet" href="css/stylesheet.css">
 <script>
 function validateForm() {
@@ -15,9 +17,10 @@ function validateForm() {
 </script>
 </head>
 <body>
+
 <div id="main">
 <div id="header">
-	<img src="images/logo.png" height="70px">
+	<a href="index.jsp"> <img src="images/logo.png" height="70px"></a>
 	<nav id="nav-3">
 	<a class="link-3" href="index.jsp">Free Trail</a>
 	<a class="link-3" href="index.jsp">Sign In</a>
@@ -26,13 +29,17 @@ function validateForm() {
 </div>
 <div class="bod">
     <center>
-        <form action="trail.jsp">
+        <form action="trail.jsp"><h2>Add New User</h2>
             <table>
-                <tr><td>Name: </td><td><input type="text" name="name" placeholder="Name" required="Plz enter your Name"></td></tr><br><br>
+                <tr><td>Name: </td><td><input type="text" name="name" placeholder="Name" required="Plz enter your Name"></td></tr>	
                 <tr><td>Password: </td><td><input type="password" name="pass" placeholder="Password" required="Plz enter your Password"></td></tr>
                 <tr><td>Email: </td><td><input type="text" name="email" placeholder="Email" required="Plz enter your EmailId" onsubmit="return validateForm();"></td></tr>
                 <tr><td>Country: </td><td><input type="text" name="country" placeholder="Country" required="Plz enter the Country"></td></tr>
-                <tr><td><input type="submit" value="submit"><td><input type="reset" value="reset"></td></td></tr>
+                <br>
+                <div class="g-recaptcha" data-sitekey="6LezjCQUAAAAAFWBsRTepvNtAEvqxTAp1eaFDOhs"></div>
+
+                <tr><td><input type="submit" value="submit"></td><td><input type="reset" value="reset"></td></tr>
+                            
             </table>
         </form>
     </center>
@@ -46,6 +53,10 @@ function validateForm() {
 </div>
 </body>
 </html>
+
+
+
+
 
 
 
