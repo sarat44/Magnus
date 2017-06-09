@@ -1,4 +1,6 @@
 <%@ page import="java.sql.*" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.Magnus.*" %>
 <html>
 <head>
 <title>IMagnus Application</title>
@@ -18,40 +20,28 @@
             <a class="link-3" href="logout.jsp">LogOut</a>
     		</nav>
     	</div>
-    	<%!
-		
-    	Connection con;
-        
-        %>
-        
-        <%
-        Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
-      
-        System.out.println("hello driver...");
-        String url="jdbc:sqlserver://localhost:1433; databaseName=sarat; user= sa; password=sarat44@";
-        con = DriverManager.getConnection(url);
-
-        Statement st=con.createStatement();
-        String str="select * from User";
-        System.out.println(str);
-       // ResultSet rs=st.executeQuery(str);
-        ResultSet rs=st.executeQuery("select * from user1");
-       	System.out.println("kamal");
-       	
+    	<%
+    	DAO O=new DAO();
+        ArrayList<Bean> al=O.select();
        	%>
     	<div id="search">
        	<center>
        	<br><br><br><br><br><h2>User</h2>
        	<table border="2">
-       	<tr><th>Name</th><th>ModileNo</th><th>EmailId</th><th>Country</th><th>Comments</th><th></th><th></th></tr>
+       	<tr><th>Name</th><th>ModileNo</th><th>EmailId</th><th>Country</th><th>Comments</th></tr>
     	 <%
-        while(rs.next())
-		{    							
-    		out.println("<tr><td>"+rs.getString(1)+"</td><td>"+rs.getString(2)+"</td><td>"+rs.getString(3)+"</td><td>"+rs.getString(4)+"</td><td>"+rs.getString(5)+"</td></tr>");
-		}
+    	 for(Bean r:al)
+         {			
+    		out.println("<tr><td>"+r.getName()+"</td><td>"+r.getMobileNo()+"</td><td>"+r.getEmail()+"</td><td>"+r.getCountry()+"</td><td>"+r.getComments()+"</td></tr>");
+		 }
         %>
         </table>
-        <h3><a href="addUser.jsp">Add User</a></h3>
+        
+        
+        
+        
+        
+        <h3><a href="addUser.jsp">Add User</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="delete.jsp">Delete user</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="edit.jsp">Edit User</a></h3>
         </center>
       	</div>	
       	<div class=footer>

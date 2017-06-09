@@ -84,6 +84,10 @@ public class Bean {
 		this.MobileNo=MobileNo;
 		this.Email=Email;
 	}
+	public Bean(String Name)
+	{
+		this.Email=Email;
+	}
 }
 
 

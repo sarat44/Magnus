@@ -27,7 +27,7 @@
 		     con = DriverManager.getConnection(url);
 
 	         Statement pt=con.createStatement();
-		     String query="insert into  student  values('"+FName+"','"+LName+"','"+Email+"','"+MobileNo+"','"+Gender+"','"+Country+"','"+City+"','"+Select[]+"')";
+		     String query="insert into  student  values('"+FName+"','"+LName+"','"+Email+"','"+MobileNo+"','"+Gender+"','"+Country+"','"+City+"')";
 		     System.out.println(query);
 			 int a=pt.executeUpdate(query);
 			
