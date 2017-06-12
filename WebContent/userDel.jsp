@@ -16,7 +16,7 @@
             <a class="link-3" href="user.jsp">Users</a>
             <a class="link-3" href="users search.jsp">Users Search</a>
             <a class="link-3" href="moreDetails.jsp">More</a>
-            <a class="link-3" href="logout.jsp">LogOut</a>
+            <a class="link-3" href="index.jsp">LogOut</a>
     		</nav>
     	</div>       
         <%
@@ -25,7 +25,7 @@
 		
 		Bean b1=new Bean(Name,Email);
 		DAO O=new DAO();
-        O.edit(b1);
+        O.delete(b1);
         
        	%>
        	<br><br><br><br><br><br><br><br><br><br><br>

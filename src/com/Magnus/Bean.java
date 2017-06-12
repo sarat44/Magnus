@@ -7,16 +7,34 @@ public class Bean {
 	private String Country;
 	private String Comments;
 	private String Pass;
+	private int Id;
 	
+	public Bean(String Name,String MobileNo,String Email,String Country,String Comments,int id)
+	{
+		this.Name=Name;
+		this.MobileNo=MobileNo;
+		this.Email=Email;
+		this.Country=Country;
+		this.Comments=Comments;	
+		this.Id=id;
+		
+	}
 	public Bean(String Name,String MobileNo,String Email,String Country,String Comments)
 	{
 		this.Name=Name;
 		this.MobileNo=MobileNo;
 		this.Email=Email;
 		this.Country=Country;
-		this.Comments=Comments;			
+		this.Comments=Comments;	
+		
+	}
+	public int getId() {
+		return Id;
 	}
 
+	public void setId(int id) {
+		Id = id;
+	}
 	public String getName() {
 		return Name;
 	}
@@ -86,8 +104,9 @@ public class Bean {
 	}
 	public Bean(String Name)
 	{
-		this.Email=Email;
+		this.Name=Name;
 	}
+	
 }
 
 

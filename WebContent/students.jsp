@@ -18,7 +18,7 @@
             <a class="link-3" href="users.jsp">Users</a>
             <a class="link-3" href="users search.jsp">Users Search</a>
             <a class="link-3" href="moreDetails.jsp">More</a>
-            <a class="link-3" href="logout.jsp">LogOut</a>
+            <a class="link-3" href="index.jsp">LogOut</a>
     	</nav>
     </div>
    </div>

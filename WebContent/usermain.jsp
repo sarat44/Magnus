@@ -17,15 +17,20 @@
                    String Name=request.getParameter("User");
                    String Pass=request.getParameter("Password");
                    session.setAttribute("user",Name);
-				   DAO O=new DAO();
-				   Boolean f=O.check(Name,Pass);
-                   if(f==true){
-                        RequestDispatcher rd=request.getRequestDispatcher("usermainSR.jsp");
-                        rd.forward(request,response);
+                   Class.forName("com.microsoft.sqlserver.jdbc.SQLServerDriver");
+       	           System.out.println("hello driver...");
+       	           String url="jdbc:sqlserver://localhost:1433; databaseName=sarat; user= sa; password=sarat44@";
+       	           con = DriverManager.getConnection(url);
+       	       	   PreparedStatement st=con.prepareStatement("select * from login where Name='"+Name+"'and password='"+Pass+"'");
+                   ResultSet rs=st.executeQuery();
+                   if(rs.next())
+                   {
+                      RequestDispatcher rd=request.getRequestDispatcher("usermainSR.jsp");
+                      rd.forward(request,response);
                    }else{
-                        RequestDispatcher rd=request.getRequestDispatcher("usermainSRE.jsp");
-                        rd.forward(request,response);
-                   }
+                      RequestDispatcher rd=request.getRequestDispatcher("usermainSRE.jsp");
+                      rd.forward(request,response);
+                  }
                  %>
 </body> 
 </html>

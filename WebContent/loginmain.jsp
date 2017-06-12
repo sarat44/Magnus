@@ -21,7 +21,7 @@
                               RequestDispatcher rd=request.getRequestDispatcher("adminRD.jsp"); 
                               rd.include(request, response);
                       }else{
-                              RequestDispatcher rd=request.getRequestDispatcher("adminRDE.jsp"); 
+                              RequestDispatcher rd=request.getRequestDispatcher("adminEre.jsp"); 
                               rd.include(request, response);
                       }
                    }catch(Exception e)

@@ -27,10 +27,18 @@
 		     con = DriverManager.getConnection(url);
 
 	         Statement pt=con.createStatement();
-		     String query="insert into  student  values('"+FName+"','"+LName+"','"+Email+"','"+MobileNo+"','"+Gender+"','"+Country+"','"+City+"')";
+		     String query="insert into  student  values('"+FName+"','"+LName+"','"+Email+"','"+MobileNo+"','"+Gender+"','"+Country+"','"+City+"'";
 		     System.out.println(query);
 			 int a=pt.executeUpdate(query);
-			
+			 if(select!=null)
+			 {
+				 out.println("<ul>");
+				 for(int i=0;i<select.length;i++)
+				 {
+					 out.println("<li>"+ select[i]+"</li>");
+				 }
+				 out.println("</ul>");
+			 }
 			
 			
 			

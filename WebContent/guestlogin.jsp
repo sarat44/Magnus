@@ -9,7 +9,7 @@
             try{
                 if(user.equals("guest") && pass.equals("magnus"))
                 {
-                    response.sendRedirect("guestRD.jsp");
+                    response.sendRedirect("user.jsp");
                      //RequestDispatcher rd=request.getRequestDispatcher("guestRD.jsp");
                      //rd.include(request,response);
                 }else{

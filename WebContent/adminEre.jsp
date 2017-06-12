@@ -22,6 +22,7 @@
 				<tr><td><input type="password" name="Pass" placeholder="Password"></td></tr>
 				<tr><td><input type="submit" value="Login"></td></tr>
                 </table>
+    <h3>Plz enter the valid userName and Password</h3>
                 </form>
 		</center>
 </div>

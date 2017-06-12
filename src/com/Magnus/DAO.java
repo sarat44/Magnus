@@ -29,6 +29,7 @@ public class DAO{
         	ps.setString(3, b1.getEmail());
         	ps.setString(4, b1.getCountry());
         	ps.setString(5, b1.getComments());
+        	
         	System.out.println("It is insert method...");
             a=ps.executeUpdate();
         }catch(Exception e)
@@ -96,30 +97,7 @@ public class DAO{
 		return al;
 	}
 	
-	
-	
-		public Boolean check(String Name,String Pass)throws SQLException{
-			boolean flag=false;
-			
-			String query="select * from login ";
-			 PreparedStatement st=con.prepareStatement(query);
-			 System.out.println("it is working....");
-			 System.out.println(query);
-			 rs=st.executeQuery();
-			 while(rs.next()){
-				String a= rs.getString("Name");
-				String b= rs.getString("password");
-				System.out.println("hello ram");
-				if(Name.equals(a) && Pass.equals(b)){
-					flag=true;
-					System.out.println("Hello If statement");
-				}
-			 }
-			
-			return flag;
-		
-		}
-		public ArrayList<Bean> select()
+	public ArrayList<Bean> select()
 		{
 			ArrayList<Bean> al=new ArrayList<>();
 			try{
@@ -129,7 +107,7 @@ public class DAO{
 				rs=ps.executeQuery();
 				while(rs.next())
 				{
-					Bean a=new Bean(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5));
+					Bean a=new Bean(rs.getString(1),rs.getString(2),rs.getString(3),rs.getString(4),rs.getString(5),rs.getInt(6));
 					System.out.println("Hello sarat Good work");
 					al.add(a);
 				}
@@ -150,11 +128,11 @@ public class DAO{
 			System.out.println(e);
 			}
 		}
-		public ResultSet edit(Bean b1)
+		public Boolean update(Bean b1)
 		{
-			ResultSet rs=null;
+			boolean flag=true;
 			try{
-				String query="select * from user1 where Name='"+b1.getName()+"'";
+				String query="select * from user1 where Name='"+b1.getName()+"' and password='"+b1.getPass()+"'";
 				System.out.println(query);
 				PreparedStatement ps=con.prepareStatement(query);
 				ps.executeUpdate();
@@ -162,7 +140,26 @@ public class DAO{
 			}catch (Exception e) {
 			System.out.println(e);
 			}
-			return rs;
+			return flag;
+		}
+		public ArrayList<Bean> guest()
+		{
+			ArrayList<Bean> al=new ArrayList<>();
+			try{
+				String query="select * from guest";
+				System.out.println(query);
+				PreparedStatement ps=con.prepareStatement(query);
+				rs=ps.executeQuery();
+				while(rs.next())
+				{
+					Bean a=new Bean(rs.getString(1),rs.getString(2));
+					System.out.println("Hello sarat Good work");
+					al.add(a);
+				}
+			}catch (Exception e) {
+			System.out.println(e);
+			}
+			return al;
 		}
 }
 

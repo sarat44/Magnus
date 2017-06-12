@@ -56,11 +56,13 @@ h2{
 	border-radius:10px;
 }
 h3{
-	color:olive;
+	color:white;
+	background-color:bule;
+	border-radius:10px;
 }
 h4{
 	color:white;
-	
+	border-radius:10px;
 }
 td{
 	font-size:18px;
